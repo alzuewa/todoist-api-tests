@@ -14,6 +14,7 @@ from data.project_constants import Color, ViewStyle
 @allure.description('Project can be created with 1 required field: project name')
 @allure.tag('Regression')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_create_project__only_required_param(session):
     with allure.step(f'Create the project with name: Shopping list'):
         new_project = ProjectRequest(name='Shopping list')
@@ -27,13 +28,10 @@ def test_create_project__only_required_param(session):
 
     with allure.step(f'Validate fields\' values'):
         assert project_response.name == new_project.name
-        assert project_response.comment_count == 0
         assert project_response.color == Color.CHARCOAL
         assert project_response.is_shared is False
-        assert project_response.order == 1
         assert project_response.is_favorite is False
-        assert project_response.is_inbox_project is False
-        assert project_response.is_team_inbox is False
+        assert project_response.inbox_project is False
         assert project_response.view_style == ViewStyle.LIST
         assert project_response.parent_id is None
 
@@ -44,6 +42,7 @@ def test_create_project__only_required_param(session):
 @allure.description('Project can be created with several fields at once')
 @allure.tag('Regression')
 @allure.severity(Severity.CRITICAL)
+@pytest.mark.PROJECTS
 def test_create_project__all_params(session, create_new_project):
     parent_project = create_new_project
 
@@ -65,13 +64,10 @@ def test_create_project__all_params(session, create_new_project):
 
     with allure.step(f'Validate fields\' values'):
         assert project_response.name == child_project.name
-        assert project_response.comment_count == 0
         assert project_response.color == Color.YELLOW
         assert project_response.is_shared is False
-        assert project_response.order == 1
         assert project_response.is_favorite is True
-        assert project_response.is_inbox_project is False
-        assert project_response.is_team_inbox is False
+        assert project_response.inbox_project is False
         assert project_response.view_style == ViewStyle.LIST
         assert project_response.parent_id == parent_project.id
 
@@ -82,12 +78,13 @@ def test_create_project__all_params(session, create_new_project):
 @allure.description('Project can not be created without required field')
 @allure.tag('Regression')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_create_project__required_param_missed(session):
     with allure.step(f'Create project without body in request'):
         resp = api.projects.create_project(session)
     with allure.step(f'Assert response code is 400 and error message'):
         assert resp.status_code == 400
-        assert resp.text == 'Name must be provided for the project creation'
+        assert 'Required argument is missing' in resp.text
 
 
 @allure.epic('Projects')
@@ -97,13 +94,14 @@ def test_create_project__required_param_missed(session):
 @allure.tag('Regression')
 @allure.severity(Severity.NORMAL)
 @pytest.mark.parametrize('name', ['', pytest.param(' ', marks=[pytest.mark.skip(reason='Issue #12345')])])
+@pytest.mark.PROJECTS
 def test_create_project__required_param_invalid_value(session, name):
     with allure.step(f'Create project with invalid name: "{name}"'):
         new_project = ProjectRequest(name=name)
         resp = api.projects.create_project(session, json=new_project)
     with allure.step(f'Assert response code is 400 and error message'):
         assert resp.status_code == 400
-        assert resp.text == 'Name must be provided for the project creation'
+        assert 'Name must be provided for the project creation' in resp.text
 
 
 @allure.epic('Authorization')

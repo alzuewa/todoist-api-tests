@@ -1,3 +1,5 @@
+import re
+
 import allure
 import pytest
 from allure_commons.types import Severity
@@ -14,6 +16,7 @@ from data.project_constants import Color, ViewStyle
 @allure.description('Project fields can be updated')
 @allure.tag('Edit')
 @allure.severity(Severity.NORMAL)
+@pytest.mark.PROJECTS
 def test_update__all_params(session, create_new_project):
     new_project = create_new_project
 
@@ -30,13 +33,10 @@ def test_update__all_params(session, create_new_project):
 
     with allure.step('Validate field values'):
         assert project_response.name == updated_fields.name
-        assert project_response.comment_count == 0
         assert project_response.color == updated_fields.color
         assert project_response.is_shared is False
-        assert project_response.order == 1
         assert project_response.is_favorite == updated_fields.is_favorite
-        assert project_response.is_inbox_project is False
-        assert project_response.is_team_inbox is False
+        assert project_response.inbox_project is False
         assert project_response.view_style == updated_fields.view_style
         assert project_response.parent_id is None
 
@@ -47,6 +47,7 @@ def test_update__all_params(session, create_new_project):
 @allure.description('At least 1 field should be passed to update the project')
 @allure.tag('Edit')
 @allure.severity(Severity.NORMAL)
+@pytest.mark.PROJECTS
 def test_update_without_params(session, create_new_project):
     new_project = create_new_project
 
@@ -55,7 +56,7 @@ def test_update_without_params(session, create_new_project):
 
     with allure.step('Assert response code is 400 and error message'):
         assert resp.status_code == 400
-        assert resp.text == 'At least one of name, color or is_favorite fields should be set'
+        assert re.search(r'At least one of.*fields should be set', resp.text)
 
 
 @allure.epic('Projects')
@@ -64,6 +65,7 @@ def test_update_without_params(session, create_new_project):
 @allure.description('Project color can be updated within a specific range of colors')
 @allure.tag('Edit')
 @allure.severity(Severity.NORMAL)
+@pytest.mark.PROJECTS
 @pytest.mark.parametrize('color', [color for color in Color if color != Color.CHARCOAL])
 def test_update__valid_color(session, create_new_project, color):
     new_project = create_new_project
@@ -89,6 +91,7 @@ def test_update__valid_color(session, create_new_project, color):
 @allure.description('Project color can not be updated with unavailable color')
 @allure.tag('Edit')
 @allure.severity(Severity.MINOR)
+@pytest.mark.PROJECTS
 def test_update__invalid_color(session, create_new_project):
     new_project = create_new_project
 
@@ -97,7 +100,7 @@ def test_update__invalid_color(session, create_new_project):
         resp = api.projects.update_project(session, project_id=new_project.id, json=updated_fields)
     with allure.step('Assert response code is 400 and error message'):
         assert resp.status_code == 400
-        assert resp.text == 'Invalid argument value'
+        assert 'Invalid argument value' in resp.text
 
 
 @allure.epic('Authorization')
@@ -105,6 +108,7 @@ def test_update__invalid_color(session, create_new_project):
 @allure.description('Project can not be updated with unauthorized request.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_update_project__unauthorized(unauthorized_session, create_new_project):
     new_project = create_new_project
     json = ProjectRequest(is_favorite=True)
@@ -119,6 +123,7 @@ def test_update_project__unauthorized(unauthorized_session, create_new_project):
 @allure.description('Project can not be updated with invalid token used.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_update_project__invalid_token(invalid_auth_session, create_new_project):
     new_project = create_new_project
     json = ProjectRequest(is_favorite=True)

@@ -1,8 +1,9 @@
 import allure
+import pytest
 from allure_commons.types import Severity
 
 import api.projects
-from data.models.response_models import AllProjectsResponse, ProjectResponse
+from data.models.response_models import GetAllProjectsResponse, ProjectResponse
 from data.project_constants import Color, ViewStyle
 
 
@@ -12,7 +13,8 @@ from data.project_constants import Color, ViewStyle
 @allure.description('Existing project should be accessible')
 @allure.tag('Regression')
 @allure.severity(Severity.BLOCKER)
-def test_get_project(session, create_new_project):
+@pytest.mark.PROJECTS
+def test_get_one_project(session, create_new_project):
     new_project = create_new_project
 
     with allure.step(f'Get project with id: {new_project.id}'):
@@ -28,13 +30,10 @@ def test_get_project(session, create_new_project):
         assert project_response.name == new_project.name
         assert project_response.id == new_project.id
         assert project_response.parent_id is None
-        assert project_response.order == 1
         assert project_response.color == Color.CHARCOAL
-        assert project_response.comment_count == 0
         assert project_response.is_shared is False
         assert project_response.is_favorite is False
-        assert project_response.is_inbox_project is False
-        assert project_response.is_team_inbox is False
+        assert project_response.inbox_project is False
         assert project_response.view_style == ViewStyle.LIST
 
 
@@ -44,6 +43,7 @@ def test_get_project(session, create_new_project):
 @allure.description('List of all the projects should be accessible')
 @allure.tag('Regression')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_get_all_projects(session, create_new_project):
     default_project_count = 1
     expected_projects = {'Inbox', create_new_project.name}
@@ -55,13 +55,14 @@ def test_get_all_projects(session, create_new_project):
         assert resp.status_code == 200
 
     with allure.step('Validate response json schema'):
-        projects_response = AllProjectsResponse.model_validate(resp.json())
+        projects_response = GetAllProjectsResponse.model_validate(resp.json())
+        projects = projects_response.results
 
     with allure.step(f'Assert projects count is {default_project_count + 1}'):
-        assert len(projects_response) == default_project_count + 1
+        assert len(projects) == default_project_count + 1
 
     with allure.step(f'Assert projects\' names match expected values'):
-        actual_projects = set([proj.name for proj in projects_response])
+        actual_projects = set([proj.name for proj in projects])
         assert actual_projects == expected_projects
 
 
@@ -70,6 +71,7 @@ def test_get_all_projects(session, create_new_project):
 @allure.description('Project can not be retrieved with unauthorized request.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_get_project__unauthorized(unauthorized_session, create_new_project):
     new_project = create_new_project
     with allure.step('Make an unauthorized request'):
@@ -83,6 +85,7 @@ def test_get_project__unauthorized(unauthorized_session, create_new_project):
 @allure.description('Project can not be retrieved with invalid token used.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_get_project__invalid_token(invalid_auth_session, create_new_project):
     new_project = create_new_project
     with allure.step('Make a request with invalid token'):

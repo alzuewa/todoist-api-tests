@@ -11,7 +11,7 @@ import api.projects
 @allure.description('After deletion project can not be accessed')
 @allure.tag('Regression')
 @allure.severity(Severity.BLOCKER)
-@pytest.mark.skip(reason='Issue #67890: Project remains retrievable after deletion')
+@pytest.mark.PROJECTS
 def test_delete_existing_project(session, create_new_project):
     new_project = create_new_project
 
@@ -26,14 +26,16 @@ def test_delete_existing_project(session, create_new_project):
 @allure.epic('Projects')
 @allure.story('Delete project')
 @allure.title('[Project] Delete. Not existing project.')
-@allure.description('Deleting not existing project should result in empty response')
+@allure.description('Deleting not existing project should result in getting error message')
 @allure.tag('Regression')
 @allure.severity(Severity.NORMAL)
+@pytest.mark.PROJECTS
 def test_delete_not_existing_project(session):
     with allure.step(f'Delete not existing project'):
-        resp = api.projects.delete_project(session, project_id='123')
-    with allure.step(f'Assert response code is 204'):
-        assert resp.status_code == 204
+        resp = api.projects.delete_project(session, project_id='6XGgm6PHrGgMpBFX')
+    with allure.step(f'Assert response code is 400'):
+        assert resp.status_code == 400
+        assert 'Value error, Invalid ProjectID' in resp.text
 
 
 @allure.epic('Authorization')
@@ -41,6 +43,7 @@ def test_delete_not_existing_project(session):
 @allure.description('Project can not be deleted with unauthorized request.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_delete_project__unauthorized(unauthorized_session, create_new_project):
     new_project = create_new_project
     with allure.step('Make an unauthorized request'):
@@ -54,6 +57,7 @@ def test_delete_project__unauthorized(unauthorized_session, create_new_project):
 @allure.description('Project can not be deleted with invalid token used.')
 @allure.tag('Regression', 'Security')
 @allure.severity(Severity.BLOCKER)
+@pytest.mark.PROJECTS
 def test_delete_project__invalid_token(invalid_auth_session, create_new_project):
     new_project = create_new_project
     with allure.step('Make a request with invalid token'):

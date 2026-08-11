@@ -32,30 +32,105 @@ class GetAllProjectsResponse(BaseModel):
     next_cursor: str | None
 
 
-class TaskResponse(BaseModel):
-    creator_id: str
-    created_at: str
-    assignee_id: str | None = None
-    assigner_id: str | None = None
-    comment_count: int
-    is_completed: bool
-    content: str
-    description: str
-    due: Due | None = None
-    duration: Duration | None = None
+class CreateTaskResponse(BaseModel):
+    user_id: str
     id: str
-    labels: List[str] | List = List
-    order: Annotated[int, pydantic.Field(gt=0)]
-    priority: Annotated[int, pydantic.Field(ge=1), pydantic.Field(le=4)]
     project_id: str
     section_id: str | None = None
     parent_id: str | None = None
-    url: str
+    added_by_uid: str
+    assigned_by_uid: str | None = None
+    responsible_uid: str | None = None
+    labels: List[str]
+    deadline: str | None
+    duration: Duration | None = None
+    is_collapsed: bool
+    checked: bool
+    is_deleted: bool
+    added_at: str
+    completed_at: str | None
+    completed_by_uid: str | None
+    updated_at: str | None
+    due: Due | None = None
+    priority: Annotated[int, pydantic.Field(ge=1), pydantic.Field(le=4)]
+    child_order: int
+    content: str
+    description: str
+    note_count: int
+    day_order: int
+    completed_count: int
+    postponed_count: int
 
 
+class GetTaskResponse(BaseModel):
+    user_id: str
+    id: str
+    project_id: str
+    section_id: str | None = None
+    parent_id: str | None = None
+    added_by_uid: str
+    assigned_by_uid: str | None = None
+    responsible_uid: str | None = None
+    labels: List[str]
+    deadline: str | None
+    duration: Duration | None = None
+    is_collapsed: bool
+    checked: bool
+    is_deleted: bool
+    added_at: str
+    completed_at: str | None
+    completed_by_uid: str | None
+    updated_at: str | None
+    due: Due | None = None
+    priority: Annotated[int, pydantic.Field(ge=1), pydantic.Field(le=4)]
+    child_order: int
+    content: str
+    description: str
+    note_count: int
+    day_order: int
+    completed_count: int
+    postponed_count: int
+
+
+class UpdateTaskResponse(BaseModel):
+    user_id: str
+    id: str
+    project_id: str
+    section_id: str | None = None
+    parent_id: str | None = None
+    added_by_uid: str
+    assigned_by_uid: str | None = None
+    responsible_uid: str | None = None
+    labels: List[str]
+    deadline: str | None
+    duration: Duration | None = None
+    is_collapsed: bool
+    checked: bool
+    is_deleted: bool
+    added_at: str
+    completed_at: str | None
+    completed_by_uid: str | None
+    updated_at: str | None
+    due: Due | None = None
+    priority: Annotated[int, pydantic.Field(ge=1), pydantic.Field(le=4)]
+    child_order: int
+    content: str
+    description: str
+    note_count: int
+    day_order: int
+    completed_count: int
+    postponed_count: int
+
+
+@deprecated('Use "GetAllTasksResponse" instead')
 class AllTasksResponse:
 
     @staticmethod
     def model_validate(response):
-        all_tasks_response = TypeAdapter(List[TaskResponse])
+        all_tasks_response = TypeAdapter(List[GetTaskResponse])
         return all_tasks_response.validate_python(response)
+
+
+class GetAllTasksResponse(BaseModel):
+    results: list[GetTaskResponse]
+    next_cursor: str | None

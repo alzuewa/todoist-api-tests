@@ -27,7 +27,26 @@ class Duration(BaseModel):
     unit: Literal['minute', 'day']
 
 
-class TaskRequest(BaseModel):
+class CreateTaskRequest(BaseModel):
+    content: str
+    description: str | None = None
+    project_id: str | None = None
+    section_id: str | None = None
+    parent_id: str | None = None
+    order: Annotated[int, Field(gt=0)] | None = None
+    labels: List[str] | None = None
+    priority: int | None = None
+    assignee_id: str | None = None
+    due_string: str | None = None
+    due_date: str | None = None
+    due_datetime: str | None = None
+    due_lang: str | None = None
+    duration: int | None = None
+    duration_unit: Literal['minute', 'day'] | None = None
+    deadline_date: str | None = None
+
+
+class UpdateTaskRequest(BaseModel):
     content: str | None = None
     description: str | None = None
     project_id: str | None = None
@@ -36,10 +55,14 @@ class TaskRequest(BaseModel):
     order: Annotated[int, Field(gt=0)] | None = None
     labels: List[str] | None = None
     priority: int | None = None
+    assignee_id: str | None = None
     due_string: str | None = None
     due_date: str | None = None
     due_datetime: str | None = None
     due_lang: str | None = None
-    assignee_id: str | None = None
     duration: int | None = None
     duration_unit: Literal['minute', 'day'] | None = None
+    deadline_date: str | None = None
+    child_order: int | None = None
+    is_collapsed: bool | None = None
+    day_order: int | None = None

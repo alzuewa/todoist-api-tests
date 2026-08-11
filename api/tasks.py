@@ -1,10 +1,10 @@
 from typing import Optional
 
-from data.models.request_models import TaskRequest
+from data.models.request_models import CreateTaskRequest
 from utils.session import ApiSession
 
 
-def create_task(session: ApiSession, json: Optional[TaskRequest] = None):
+def create_task(session: ApiSession, json: Optional[CreateTaskRequest] = None):
     if json:
         json = json.model_dump(exclude_unset=True)
         with session:
@@ -33,7 +33,7 @@ def delete_task(session: ApiSession, task_id: str):
     return response
 
 
-def update_task(session: ApiSession, task_id: str, json: Optional[TaskRequest] = None):
+def update_task(session: ApiSession, task_id: str, json: Optional[CreateTaskRequest] = None):
     if json:
         json = json.model_dump(exclude_unset=True)
         with session:

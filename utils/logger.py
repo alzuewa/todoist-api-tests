@@ -64,6 +64,6 @@ def logger(func: Callable):
 
 def secure_headers(headers: dict):
     for key in headers:
-        if key == 'Authorization':
+        if key in ('Authorization', 'Cookie'):
             headers[key] = '*****'
     return headers

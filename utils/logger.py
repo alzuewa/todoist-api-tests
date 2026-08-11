@@ -10,7 +10,7 @@ from requests.exceptions import JSONDecodeError
 
 _logger = logging.getLogger(__name__)
 console_formatter = logging.Formatter('\n==> {asctime} - [{levelname}] - {message}', style='{',
-                                      datefmt='%Y-%m-%d %H:%M')
+                                      datefmt='%Y-%m-%d %H:%M:%S')
 console_handler = logging.StreamHandler(stream=sys.stdout)
 console_handler.setLevel('INFO')
 console_handler.setFormatter(console_formatter)

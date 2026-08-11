@@ -1,0 +1,98 @@
+
+==> 2026-08-11 19:52:58 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-11 19:52:58 - [INFO] - Request method:: POST
+
+==> 2026-08-11 19:52:58 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '24', 'Authorization': '*****'}
+
+==> 2026-08-11 19:52:58 - [INFO] - Request body:: {"content": "Buy bread"}
+
+==> 2026-08-11 19:52:58 - [INFO] - Response status code:: 200
+
+==> 2026-08-11 19:52:58 - [INFO] - Response json:: {'user_id': '46935177', 'id': '6hGCCPjrVXQ2JFv8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:57.980843Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:57.980863Z', 'due': None, 'priority': 1, 'child_order': 1, 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}
+<=====
+
+
+==> 2026-08-11 19:52:59 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-11 19:52:59 - [INFO] - Request method:: POST
+
+==> 2026-08-11 19:52:59 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '30', 'Authorization': '*****'}
+
+==> 2026-08-11 19:52:59 - [INFO] - Request body:: {"content": "Call the friend"}
+
+==> 2026-08-11 19:52:59 - [INFO] - Response status code:: 200
+
+==> 2026-08-11 19:52:59 - [INFO] - Response json:: {'user_id': '46935177', 'id': '6hGCCPmrWmvq2wr8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:58.756385Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:58.756407Z', 'due': None, 'priority': 1, 'child_order': 2, 'content': 'Call the friend', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}
+<=====
+
+
+==> 2026-08-11 19:52:59 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-11 19:52:59 - [INFO] - Request method:: GET
+
+==> 2026-08-11 19:52:59 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-11 19:52:59 - [INFO] - Request body:: None
+
+==> 2026-08-11 19:52:59 - [INFO] - Response status code:: 200
+
+==> 2026-08-11 19:52:59 - [INFO] - Response json:: {'results': [{'user_id': '46935177', 'id': '6hGCCPjrVXQ2JFv8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:57.980843Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:57.980863Z', 'due': None, 'priority': 1, 'child_order': 1, 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}, {'user_id': '46935177', 'id': '6hGCCPmrWmvq2wr8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:58.756385Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:58.756407Z', 'due': None, 'priority': 1, 'child_order': 2, 'content': 'Call the friend', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-11 19:52:59 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-11 19:52:59 - [INFO] - Request method:: GET
+
+==> 2026-08-11 19:52:59 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-11 19:52:59 - [INFO] - Request body:: None
+
+==> 2026-08-11 19:52:59 - [INFO] - Response status code:: 200
+
+==> 2026-08-11 19:52:59 - [INFO] - Response json:: {'results': [{'user_id': '46935177', 'id': '6hGCCPjrVXQ2JFv8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:57.980843Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:57.980863Z', 'due': None, 'priority': 1, 'child_order': 1, 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}, {'user_id': '46935177', 'id': '6hGCCPmrWmvq2wr8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-11T19:52:58.756385Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-11T19:52:58.756407Z', 'due': None, 'priority': 1, 'child_order': 2, 'content': 'Call the friend', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-11 19:53:00 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hGCCPjrVXQ2JFv8
+
+==> 2026-08-11 19:53:00 - [INFO] - Request method:: DELETE
+
+==> 2026-08-11 19:53:00 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-11 19:53:00 - [INFO] - Request body:: None
+
+==> 2026-08-11 19:53:00 - [INFO] - Response status code:: 204
+
+==> 2026-08-11 19:53:00 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-11 19:53:01 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hGCCPmrWmvq2wr8
+
+==> 2026-08-11 19:53:01 - [INFO] - Request method:: DELETE
+
+==> 2026-08-11 19:53:01 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-11 19:53:01 - [INFO] - Request body:: None
+
+==> 2026-08-11 19:53:01 - [INFO] - Response status code:: 204
+
+==> 2026-08-11 19:53:01 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-11 19:53:01 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-11 19:53:01 - [INFO] - Request method:: GET
+
+==> 2026-08-11 19:53:01 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-11 19:53:01 - [INFO] - Request body:: None
+
+==> 2026-08-11 19:53:01 - [INFO] - Response status code:: 200
+
+==> 2026-08-11 19:53:01 - [INFO] - Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}], 'next_cursor': None}
+<=====
+

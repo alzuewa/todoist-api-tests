@@ -1,0 +1,29 @@
+{
+    "id": "6hGCCGfrw9gg892j",
+    "can_assign_tasks": false,
+    "can_comment": true,
+    "child_order": 1,
+    "is_collapsed": false,
+    "color": "violet",
+    "creator_uid": "46935177",
+    "created_at": "2026-08-11T19:52:12.271022Z",
+    "is_archived": false,
+    "is_deleted": false,
+    "is_favorite": false,
+    "is_frozen": false,
+    "name": "Shopping list",
+    "is_shared": false,
+    "updated_at": "2026-08-11T19:52:12.271035Z",
+    "view_style": "list",
+    "default_order": 0,
+    "description": "",
+    "public_access": false,
+    "public_key": "f26a0d74-be2c-49f2-9176-030c1305203c",
+    "access": {
+        "visibility": "restricted",
+        "configuration": {}
+    },
+    "role": "CREATOR",
+    "parent_id": null,
+    "inbox_project": false
+}

@@ -12,14 +12,14 @@ from utils.session import ApiSession, BearerAuth
 
 @pytest.fixture(scope='package', name='session')
 def authorized_session():
-    session = ApiSession(base_url=config.base_url, auth=BearerAuth(config.token))
+    session = ApiSession(base_url=test_config.base_url, auth=BearerAuth(test_config.token))
 
     yield session
 
 
 @pytest.fixture(scope='function')
 def unauthorized_session():
-    session = ApiSession(base_url=config.base_url)
+    session = ApiSession(base_url=test_config.base_url)
 
     yield session
 

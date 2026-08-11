@@ -1,6 +1,7 @@
 from typing import Optional
 
 from data.models.request_models import ProjectRequest
+from data.models.response_models import GetAllProjectsResponse
 from utils.session import ApiSession
 
 
@@ -45,7 +46,8 @@ def delete_project(session: ApiSession, project_id: str):
 
 def delete_all_projects_but_inbox(session: ApiSession):
     with session:
-        response = get_all_projects(session).json()
-        project_ids = [project['id'] for project in response if project['name'] != 'Inbox']
+        api_response = get_all_projects(session)
+        response_model = GetAllProjectsResponse.model_validate(api_response.json())
+        project_ids = [project.id for project in response_model.results if project.name != 'Inbox']
         for project_id in project_ids:
             delete_project(session, project_id=project_id)

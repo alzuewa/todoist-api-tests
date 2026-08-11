@@ -2,8 +2,7 @@ from typing import List
 
 import pydantic
 from pydantic import BaseModel, TypeAdapter
-from typing_extensions import Annotated
-
+from typing_extensions import Annotated, deprecated
 from data.models.request_models import Due, Duration
 from data.project_constants import Color, ViewStyle
 
@@ -11,24 +10,26 @@ from data.project_constants import Color, ViewStyle
 class ProjectResponse(BaseModel):
     id: str
     name: str
-    comment_count: int
-    order: int
     color: Color
     is_shared: bool
     is_favorite: bool
     parent_id: str | None
-    is_inbox_project: bool
-    is_team_inbox: bool
+    inbox_project: bool
     view_style: ViewStyle
-    url: str
 
 
+@deprecated('Use "GetAllProjectsResponse" instead')
 class AllProjectsResponse:
 
     @staticmethod
     def model_validate(response):
         all_projects_response = TypeAdapter(List[ProjectResponse])
         return all_projects_response.validate_python(response)
+
+
+class GetAllProjectsResponse(BaseModel):
+    results: list[ProjectResponse]
+    next_cursor: str | None
 
 
 class TaskResponse(BaseModel):

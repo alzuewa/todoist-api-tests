@@ -42,7 +42,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.TOKEN }}
           INBOX_ID: ${{ secrets.INBOX_ID }}
-        run: pytest --token "$TOKEN" --inbox-id "$INBOX_ID"
+        run: python3 -m pytest --token "$TOKEN" --inbox-id "$INBOX_ID"
 
       - name: Upload Allure results
         uses: actions/upload-artifact@v7

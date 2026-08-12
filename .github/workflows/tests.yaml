@@ -28,13 +28,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Clone repository
-        run: git clone https://github.com/alzuewa/autotests-api.git
-
       - name: Prepare environment
         run: |
-          python3 -m venv .venv
-          source .venv/bin/activate
           poetry install --no-root
 
       - name: Run tests with pytest and generate Allure results

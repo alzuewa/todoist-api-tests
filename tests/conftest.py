@@ -11,21 +11,13 @@ from utils.session import ApiSession, BearerAuth
 
 
 def pytest_addoption(parser):
-    parser.addoption('--run-local', action='store_true', default=False, help='Pass this to run tests on local machine')
-    parser.addoption('--token', action='store', type=str, default=None, help='Todoist Bearer token')
-    parser.addoption('--inbox-id', action='store', type=str, default=None, help='Inbox ID in Todoist space')
+    parser.addoption('--token', action='store', required=True, type=str, default=None, help='Todoist Bearer token')
+    parser.addoption('--inbox-id', action='store', required=True, type=str, default=None, help='Inbox ID in Todoist space')
 
 
 def pytest_configure(config):
-    is_local_run = config.getoption('--run-local')
-    token = config.getoption('--token')
-    inbox_id = config.getoption('--inbox-id')
-
-    if is_local_run and not (token and inbox_id):
-        raise pytest.UsageError('token and inbox-id have to be passed if `--run-local` is used')
-
-    test_config.token = token
-    test_config.inbox_id = inbox_id
+    test_config.token = config.getoption('--token')
+    test_config.inbox_id = config.getoption('--inbox-id')
 
 
 @pytest.fixture(scope='package', name='session')

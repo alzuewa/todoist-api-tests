@@ -1,0 +1,12 @@
+{
+    "error": "Invalid argument value",
+    "error_code": 20,
+    "error_extra": {
+        "argument": "project_id",
+        "event_id": "27f6ae172cfc438bbca11c23fe4328bd",
+        "expected": "Value error, Invalid ProjectID",
+        "retry_after": 11
+    },
+    "error_tag": "INVALID_ARGUMENT_VALUE",
+    "http_code": 400
+}

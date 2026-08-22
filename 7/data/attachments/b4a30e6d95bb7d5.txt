@@ -1,0 +1,154 @@
+
+==> 2026-08-22 09:17:31 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-22 09:17:31 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:17:31 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '24', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:31 - [INFO] - Request body:: {"content": "Buy bread"}
+
+==> 2026-08-22 09:17:31 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:31 - [INFO] - Response json:: {'user_id': '46935177', 'id': '6hJhJRjg7wcfrVwg', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:30.660301Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:30.660322Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'b2pAzh', 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}
+<=====
+
+
+==> 2026-08-22 09:17:32 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-22 09:17:32 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:17:32 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '61', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:32 - [INFO] - Request body:: {"content": "Withdraw cash", "parent_id": "6hJhJRjg7wcfrVwg"}
+
+==> 2026-08-22 09:17:32 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:32 - [INFO] - Response json:: {'user_id': '46935177', 'id': '6hJhJRvP5qXCWfh8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': '6hJhJRjg7wcfrVwg', 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:31.778436Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:31.778455Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'a1', 'content': 'Withdraw cash', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}
+<=====
+
+
+==> 2026-08-22 09:17:33 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hJhJRvP5qXCWfh8/close
+
+==> 2026-08-22 09:17:33 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:17:33 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:33 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:33 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:17:33 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:17:34 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hJhJRjg7wcfrVwg/close
+
+==> 2026-08-22 09:17:34 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:17:34 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:34 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:34 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:17:34 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:17:34 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-22 09:17:34 - [INFO] - Request method:: GET
+
+==> 2026-08-22 09:17:34 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:34 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:34 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:34 - [INFO] - Response json:: {'results': [], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-22 09:17:35 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hJhJRvP5qXCWfh8/reopen
+
+==> 2026-08-22 09:17:35 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:17:35 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:35 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:35 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:17:35 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:17:36 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-22 09:17:36 - [INFO] - Request method:: GET
+
+==> 2026-08-22 09:17:36 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:36 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:36 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:36 - [INFO] - Response json:: {'results': [{'user_id': '46935177', 'id': '6hJhJRjg7wcfrVwg', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:30.660301Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:35.027824Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'b2pAzh', 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 1, 'postponed_count': 0}, {'user_id': '46935177', 'id': '6hJhJRvP5qXCWfh8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': '6hJhJRjg7wcfrVwg', 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:31.778436Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:35.108820Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'a1', 'content': 'Withdraw cash', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 1, 'postponed_count': 0}], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-22 09:17:36 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-22 09:17:36 - [INFO] - Request method:: GET
+
+==> 2026-08-22 09:17:36 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:36 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:36 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:36 - [INFO] - Response json:: {'results': [{'user_id': '46935177', 'id': '6hJhJRjg7wcfrVwg', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:30.660301Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:35.027824Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'b2pAzh', 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 1, 'postponed_count': 0}, {'user_id': '46935177', 'id': '6hJhJRvP5qXCWfh8', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': '6hJhJRjg7wcfrVwg', 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-08-22T09:17:31.778436Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-08-22T09:17:35.108820Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'a1', 'content': 'Withdraw cash', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 1, 'postponed_count': 0}], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-22 09:17:37 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hJhJRjg7wcfrVwg
+
+==> 2026-08-22 09:17:37 - [INFO] - Request method:: DELETE
+
+==> 2026-08-22 09:17:37 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:37 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:37 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:17:37 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:17:37 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks/6hJhJRvP5qXCWfh8
+
+==> 2026-08-22 09:17:37 - [INFO] - Request method:: DELETE
+
+==> 2026-08-22 09:17:37 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:37 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:37 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:17:37 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:17:37 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-22 09:17:37 - [INFO] - Request method:: GET
+
+==> 2026-08-22 09:17:37 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-22 09:17:37 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:17:37 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:17:37 - [INFO] - Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'order_key': 'a0', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}], 'next_cursor': None}
+<=====
+

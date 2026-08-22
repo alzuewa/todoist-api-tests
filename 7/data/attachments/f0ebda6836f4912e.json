@@ -1,0 +1,11 @@
+{
+    "error": "Required argument is missing",
+    "error_code": 19,
+    "error_extra": {
+        "argument": "name",
+        "event_id": "fdcbf3848e614f2689e77e86ca1def1a",
+        "retry_after": 4
+    },
+    "error_tag": "ARGUMENT_MISSING",
+    "http_code": 400
+}

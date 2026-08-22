@@ -1,0 +1,70 @@
+
+==> 2026-08-22 09:15:17 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-22 09:15:17 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:15:17 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '25', 'Authorization': '*****'}
+
+==> 2026-08-22 09:15:17 - [INFO] - Request body:: {"name": "Shopping list"}
+
+==> 2026-08-22 09:15:17 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:15:17 - [INFO] - Response json:: {'id': '6hJhJ72GwjQhX66Q', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1cJ7', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2026-08-22T09:15:17.216930Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Shopping list', 'is_shared': False, 'updated_at': '2026-08-22T09:15:17.216945Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': 'efb19399-a954-49fa-ac66-d497be26ffaf', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': False}
+<=====
+
+
+==> 2026-08-22 09:15:18 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-22 09:15:18 - [INFO] - Request method:: POST
+
+==> 2026-08-22 09:15:18 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '126', 'Authorization': '*****'}
+
+==> 2026-08-22 09:15:18 - [INFO] - Request body:: {"name": "Shopping list inner", "parent_id": "6hJhJ72GwjQhX66Q", "color": "yellow", "is_favorite": true, "view_style": "list"}
+
+==> 2026-08-22 09:15:18 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:15:18 - [INFO] - Response json:: {'id': '6hJhJ6xF5VM8hggF', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1', 'is_collapsed': False, 'color': 'yellow', 'creator_uid': '46935177', 'created_at': '2026-08-22T09:15:17.899912Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': True, 'is_frozen': False, 'name': 'Shopping list inner', 'is_shared': False, 'updated_at': '2026-08-22T09:15:17.899923Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '24ee5206-094c-46a6-9684-f9523186770c', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': '6hJhJ72GwjQhX66Q', 'inbox_project': False}
+<=====
+
+
+==> 2026-08-22 09:15:18 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-22 09:15:18 - [INFO] - Request method:: GET
+
+==> 2026-08-22 09:15:18 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-22 09:15:18 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:15:18 - [INFO] - Response status code:: 200
+
+==> 2026-08-22 09:15:18 - [INFO] - Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'order_key': 'a0', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}, {'id': '6hJhJ72GwjQhX66Q', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1cJ7', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2026-08-22T09:15:17.216930Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Shopping list', 'is_shared': False, 'updated_at': '2026-08-22T09:15:17.216945Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': 'efb19399-a954-49fa-ac66-d497be26ffaf', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': False}, {'id': '6hJhJ6xF5VM8hggF', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1', 'is_collapsed': False, 'color': 'yellow', 'creator_uid': '46935177', 'created_at': '2026-08-22T09:15:17.899912Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': True, 'is_frozen': False, 'name': 'Shopping list inner', 'is_shared': False, 'updated_at': '2026-08-22T09:15:17.899923Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '24ee5206-094c-46a6-9684-f9523186770c', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': '6hJhJ72GwjQhX66Q', 'inbox_project': False}], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-22 09:15:19 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects/6hJhJ72GwjQhX66Q
+
+==> 2026-08-22 09:15:19 - [INFO] - Request method:: DELETE
+
+==> 2026-08-22 09:15:19 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:15:19 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:15:19 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:15:19 - [INFO] - Response text:: 
+<=====
+
+
+==> 2026-08-22 09:15:19 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects/6hJhJ6xF5VM8hggF
+
+==> 2026-08-22 09:15:19 - [INFO] - Request method:: DELETE
+
+==> 2026-08-22 09:15:19 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+
+==> 2026-08-22 09:15:19 - [INFO] - Request body:: None
+
+==> 2026-08-22 09:15:19 - [INFO] - Response status code:: 204
+
+==> 2026-08-22 09:15:19 - [INFO] - Response text:: 
+<=====
+

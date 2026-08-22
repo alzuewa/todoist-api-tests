@@ -1,0 +1,33 @@
+{
+    "user_id": "46935177",
+    "id": "6hJhJP6r8hQmqCMR",
+    "project_id": "6hJhJP4PM2hHfFRR",
+    "section_id": null,
+    "parent_id": null,
+    "added_by_uid": "46935177",
+    "assigned_by_uid": null,
+    "responsible_uid": null,
+    "labels": [
+        "groceries",
+        "home"
+    ],
+    "deadline": null,
+    "duration": null,
+    "is_collapsed": false,
+    "checked": false,
+    "is_deleted": false,
+    "added_at": "2026-08-22T09:17:00.903757Z",
+    "completed_at": null,
+    "completed_by_uid": null,
+    "updated_at": "2026-08-22T09:17:00.903777Z",
+    "due": null,
+    "priority": 3,
+    "child_order": 1,
+    "order_key": "a1",
+    "content": "Buy bread",
+    "description": "",
+    "note_count": 0,
+    "day_order": -1,
+    "completed_count": 0,
+    "postponed_count": 0
+}

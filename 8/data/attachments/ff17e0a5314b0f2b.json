@@ -1,0 +1,10 @@
+{
+    "error": "Task not found",
+    "error_code": 478,
+    "error_extra": {
+        "event_id": "56a1d054cf9d4222899b412b78303c3e",
+        "retry_after": 17
+    },
+    "error_tag": "NOT_FOUND",
+    "http_code": 404
+}

@@ -1,0 +1,42 @@
+
+==> 2026-08-29 14:03:12 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-29 14:03:12 - [INFO] - Request method:: POST
+
+==> 2026-08-29 14:03:12 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Content-Length': '24'}
+
+==> 2026-08-29 14:03:12 - [INFO] - Request body:: {"content": "Test task"}
+
+==> 2026-08-29 14:03:12 - [INFO] - Response status code:: 401
+
+==> 2026-08-29 14:03:12 - [INFO] - Response json:: {'error': 'Unauthorized', 'error_code': 477, 'error_extra': {'event_id': 'dc7b603865fe412cadee7510f0cfbf9c', 'retry_after': 1280}, 'error_tag': 'UNAUTHORIZED', 'http_code': 401}
+<=====
+
+
+==> 2026-08-29 14:03:12 - [INFO] - Request URL:: https://api.todoist.com/api/v1/tasks
+
+==> 2026-08-29 14:03:12 - [INFO] - Request method:: GET
+
+==> 2026-08-29 14:03:12 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-29 14:03:12 - [INFO] - Request body:: None
+
+==> 2026-08-29 14:03:12 - [INFO] - Response status code:: 200
+
+==> 2026-08-29 14:03:12 - [INFO] - Response json:: {'results': [], 'next_cursor': None}
+<=====
+
+
+==> 2026-08-29 14:03:12 - [INFO] - Request URL:: https://api.todoist.com/api/v1/projects
+
+==> 2026-08-29 14:03:12 - [INFO] - Request method:: GET
+
+==> 2026-08-29 14:03:12 - [INFO] - Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+
+==> 2026-08-29 14:03:12 - [INFO] - Request body:: None
+
+==> 2026-08-29 14:03:12 - [INFO] - Response status code:: 200
+
+==> 2026-08-29 14:03:12 - [INFO] - Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'order_key': 'a0', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}], 'next_cursor': None}
+<=====
+

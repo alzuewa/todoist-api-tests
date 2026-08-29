@@ -1,0 +1,29 @@
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/projects
+INFO     utils.logger:logger.py:43 Request method:: POST
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '25', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:46 Request body:: {"name": "Shopping list"}
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'id': '6hPMGg2J4qc4WPWC', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1k1J', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2026-08-29T14:02:46.938398Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Shopping list', 'is_shared': False, 'updated_at': '2026-08-29T14:02:46.938416Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': 'fa0f1d33-53a6-42a6-8f26-a924badc4446', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': False}
+<=====
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/projects/6hPMGg2J4qc4WPWC
+INFO     utils.logger:logger.py:43 Request method:: POST
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '19', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:46 Request body:: {"color": "orange"}
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'id': '6hPMGg2J4qc4WPWC', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1k1J', 'is_collapsed': False, 'color': 'orange', 'creator_uid': '46935177', 'created_at': '2026-08-29T14:02:46.938398Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Shopping list', 'is_shared': False, 'updated_at': '2026-08-29T14:02:46.938416Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': 'fa0f1d33-53a6-42a6-8f26-a924badc4446', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': False}
+<=====
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/projects
+INFO     utils.logger:logger.py:43 Request method:: GET
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'order_key': 'a0', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}, {'id': '6hPMGg2J4qc4WPWC', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 1, 'order_key': 'a1k1J', 'is_collapsed': False, 'color': 'orange', 'creator_uid': '46935177', 'created_at': '2026-08-29T14:02:46.938398Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Shopping list', 'is_shared': False, 'updated_at': '2026-08-29T14:02:47.194669Z', 'view_style': 'list', 'default_order': 0, 'description': '', 'public_access': False, 'public_key': 'fa0f1d33-53a6-42a6-8f26-a924badc4446', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': False}], 'next_cursor': None}
+<=====
+
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/projects/6hPMGg2J4qc4WPWC
+INFO     utils.logger:logger.py:43 Request method:: DELETE
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 204
+INFO     utils.logger:logger.py:54 Response text:: 
+<=====

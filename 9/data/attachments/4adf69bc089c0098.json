@@ -1,0 +1,12 @@
+{
+    "error": "Invalid argument value",
+    "error_code": 20,
+    "error_extra": {
+        "argument": "color",
+        "event_id": "a3becd183f074259ab68ca5bc6e712a1",
+        "expected": "Value error, Invalid color",
+        "retry_after": 8
+    },
+    "error_tag": "INVALID_ARGUMENT_VALUE",
+    "http_code": 400
+}

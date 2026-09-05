@@ -1,0 +1,67 @@
+{
+    "results": [
+        {
+            "id": "6QvJhV5V7vvqwvr8",
+            "can_assign_tasks": false,
+            "can_comment": true,
+            "child_order": 0,
+            "order_key": "a0",
+            "is_collapsed": false,
+            "color": "charcoal",
+            "creator_uid": "46935177",
+            "created_at": "2023-11-04T09:59:19.650454Z",
+            "is_archived": false,
+            "is_deleted": false,
+            "is_favorite": false,
+            "is_frozen": false,
+            "name": "Inbox",
+            "is_shared": false,
+            "updated_at": "2024-12-31T02:46:02.749482Z",
+            "view_style": "list",
+            "default_order": 0,
+            "default_order_key": null,
+            "description": "",
+            "public_access": false,
+            "public_key": "6c3b7982-dc63-409d-b816-fe344e74d274",
+            "access": {
+                "visibility": "restricted",
+                "configuration": {}
+            },
+            "role": "CREATOR",
+            "parent_id": null,
+            "inbox_project": true
+        },
+        {
+            "id": "6hR38gpCmhJ4gCH4",
+            "can_assign_tasks": false,
+            "can_comment": true,
+            "child_order": 1,
+            "order_key": "a1EiI",
+            "is_collapsed": false,
+            "color": "grey",
+            "creator_uid": "46935177",
+            "created_at": "2026-09-05T12:10:53.013310Z",
+            "is_archived": false,
+            "is_deleted": false,
+            "is_favorite": false,
+            "is_frozen": false,
+            "name": "Shopping list",
+            "is_shared": false,
+            "updated_at": "2026-09-05T12:10:53.389237Z",
+            "view_style": "list",
+            "default_order": 0,
+            "default_order_key": null,
+            "description": "",
+            "public_access": false,
+            "public_key": "ad564575-f8e2-455a-96fe-68f2cc326ce2",
+            "access": {
+                "visibility": "restricted",
+                "configuration": {}
+            },
+            "role": "CREATOR",
+            "parent_id": null,
+            "inbox_project": false
+        }
+    ],
+    "next_cursor": null
+}

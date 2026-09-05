@@ -1,0 +1,10 @@
+{
+    "error": "Project not found",
+    "error_code": 478,
+    "error_extra": {
+        "event_id": "e551c0b1987f484b99e611405c11aed0",
+        "retry_after": 2
+    },
+    "error_tag": "NOT_FOUND",
+    "http_code": 404
+}

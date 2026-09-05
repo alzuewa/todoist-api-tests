@@ -1,0 +1,31 @@
+{
+    "id": "6hR38f2W7JV2RxVC",
+    "can_assign_tasks": false,
+    "can_comment": true,
+    "child_order": 1,
+    "order_key": "a1gdH",
+    "is_collapsed": false,
+    "color": "lime_green",
+    "creator_uid": "46935177",
+    "created_at": "2026-09-05T12:10:32.639710Z",
+    "is_archived": false,
+    "is_deleted": false,
+    "is_favorite": true,
+    "is_frozen": false,
+    "name": "Travelling",
+    "is_shared": false,
+    "updated_at": "2026-09-05T12:10:33.093406Z",
+    "view_style": "board",
+    "default_order": 0,
+    "default_order_key": null,
+    "description": "",
+    "public_access": false,
+    "public_key": "3291ef7e-8d9d-4568-906b-32cd45445916",
+    "access": {
+        "visibility": "restricted",
+        "configuration": {}
+    },
+    "role": "CREATOR",
+    "parent_id": null,
+    "inbox_project": false
+}

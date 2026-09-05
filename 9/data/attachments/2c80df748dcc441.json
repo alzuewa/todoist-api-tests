@@ -1,0 +1,35 @@
+{
+    "results": [
+        {
+            "user_id": "46935177",
+            "id": "6hR38hPp2xx6Q6Rg",
+            "project_id": "6QvJhV5V7vvqwvr8",
+            "section_id": null,
+            "parent_id": null,
+            "added_by_uid": "46935177",
+            "assigned_by_uid": null,
+            "responsible_uid": null,
+            "labels": [],
+            "deadline": null,
+            "duration": null,
+            "is_collapsed": false,
+            "checked": false,
+            "is_deleted": false,
+            "added_at": "2026-09-05T12:11:00.142815Z",
+            "completed_at": null,
+            "completed_by_uid": null,
+            "updated_at": "2026-09-05T12:11:00.142838Z",
+            "due": null,
+            "priority": 1,
+            "child_order": 1,
+            "order_key": "b2vPUp",
+            "content": "Buy bread",
+            "description": "",
+            "note_count": 0,
+            "day_order": -1,
+            "completed_count": 0,
+            "postponed_count": 0
+        }
+    ],
+    "next_cursor": null
+}

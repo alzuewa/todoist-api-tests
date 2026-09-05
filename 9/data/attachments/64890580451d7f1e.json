@@ -1,0 +1,10 @@
+{
+    "error": "At least one of name, description, color, is_favorite, view_style, child_order, is_collapsed or folder_id fields should be set",
+    "error_code": 42,
+    "error_extra": {
+        "event_id": "51e38fbc7ac647f28d43f505a8a22e5f",
+        "retry_after": 5
+    },
+    "error_tag": "BAD_REQUEST",
+    "http_code": 400
+}

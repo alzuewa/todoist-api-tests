@@ -1,0 +1,10 @@
+{
+    "error": "Unauthorized",
+    "error_code": 477,
+    "error_extra": {
+        "event_id": "2cb127d44af04fd5b7ae467e7ed9b702",
+        "retry_after": 64
+    },
+    "error_tag": "UNAUTHORIZED",
+    "http_code": 401
+}

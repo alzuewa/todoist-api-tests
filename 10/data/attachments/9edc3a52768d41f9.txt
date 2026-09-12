@@ -1,0 +1,37 @@
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/tasks
+INFO     utils.logger:logger.py:43 Request method:: POST
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '24', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:46 Request body:: {"content": "Buy bread"}
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'user_id': '46935177', 'id': '6hVfj6xPx89rJW4g', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-09-12T12:27:36.032861Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-09-12T12:27:36.032885Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'b2yper', 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}
+<=====
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/tasks/6hVfj6xPx89rJW4g/close
+INFO     utils.logger:logger.py:43 Request method:: POST
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Content-Length': '0'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 401
+INFO     utils.logger:logger.py:51 Response json:: {'error': 'Unauthorized', 'error_code': 477, 'error_extra': {'event_id': '111cc88c9b0c42bf8ff867e556ddbb2a', 'retry_after': 1026}, 'error_tag': 'UNAUTHORIZED', 'http_code': 401}
+<=====
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/tasks
+INFO     utils.logger:logger.py:43 Request method:: GET
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'results': [{'user_id': '46935177', 'id': '6hVfj6xPx89rJW4g', 'project_id': '6QvJhV5V7vvqwvr8', 'section_id': None, 'parent_id': None, 'added_by_uid': '46935177', 'assigned_by_uid': None, 'responsible_uid': None, 'labels': [], 'deadline': None, 'duration': None, 'is_collapsed': False, 'checked': False, 'is_deleted': False, 'added_at': '2026-09-12T12:27:36.032861Z', 'completed_at': None, 'completed_by_uid': None, 'updated_at': '2026-09-12T12:27:36.032885Z', 'due': None, 'priority': 1, 'child_order': 1, 'order_key': 'b2yper', 'content': 'Buy bread', 'description': '', 'note_count': 0, 'day_order': -1, 'completed_count': 0, 'postponed_count': 0}], 'next_cursor': None}
+<=====
+
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/tasks/6hVfj6xPx89rJW4g
+INFO     utils.logger:logger.py:43 Request method:: DELETE
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Content-Length': '0', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 204
+INFO     utils.logger:logger.py:54 Response text:: 
+<=====
+
+INFO     utils.logger:logger.py:42 Request URL:: https://api.todoist.com/api/v1/projects
+INFO     utils.logger:logger.py:43 Request method:: GET
+INFO     utils.logger:logger.py:44 Request headers:: {'Content-Type': 'application/json', 'Cookie': '*****', 'Authorization': '*****'}
+INFO     utils.logger:logger.py:48 Request body:: None
+INFO     utils.logger:logger.py:49 Response status code:: 200
+INFO     utils.logger:logger.py:51 Response json:: {'results': [{'id': '6QvJhV5V7vvqwvr8', 'can_assign_tasks': False, 'can_comment': True, 'child_order': 0, 'order_key': 'a0', 'is_collapsed': False, 'color': 'charcoal', 'creator_uid': '46935177', 'created_at': '2023-11-04T09:59:19.650454Z', 'is_archived': False, 'is_deleted': False, 'is_favorite': False, 'is_frozen': False, 'name': 'Inbox', 'is_shared': False, 'updated_at': '2024-12-31T02:46:02.749482Z', 'view_style': 'list', 'default_order': 0, 'default_order_key': None, 'description': '', 'public_access': False, 'public_key': '6c3b7982-dc63-409d-b816-fe344e74d274', 'access': {'visibility': 'restricted', 'configuration': {}}, 'role': 'CREATOR', 'parent_id': None, 'inbox_project': True}], 'next_cursor': None}
+<=====

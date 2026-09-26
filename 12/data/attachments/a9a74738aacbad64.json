@@ -1,0 +1,10 @@
+{
+    "error": "Name must be provided for the project creation",
+    "error_code": 42,
+    "error_extra": {
+        "event_id": "ea59506f590f40dca95905a53a50a52f",
+        "retry_after": 1
+    },
+    "error_tag": "BAD_REQUEST",
+    "http_code": 400
+}
